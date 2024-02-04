@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woman Safety App - Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: -webkit-linear-gradient(right,#cc6900,#e87b15,#ffaa5a
+  , #f7cc87);
+    }
+
+
+    section {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #ff8800;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff6200;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>                                   </h1>
+  </header>
+
+  <section>
+    <h2>User Profile</h2>
+    <form id="profileForm">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="emergencyContact">Emergency Contact:</label>
+      <input type="text" id="emergencyContact" name="emergencyContact" required>
+
+      <label for="location">Current Location:</label>
+      <input type="text" id="location" name="location" required>
+
+      <button type="button" onclick="updateProfile()">Update Profile</button>
+    </form>
+  </section>
+
+  <script>
+    function updateProfile() {
+      // Add logic to handle profile update, e.g., send data to server
+      alert('Profile updated successfully!');
+    }
+  </script>
+
+</body>
+</html>
