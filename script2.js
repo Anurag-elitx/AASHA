@@ -60,6 +60,7 @@ function stopRecording() {
       downloadLink.download = 'recorded_video.webm';
       downloadLink.textContent = 'Download Video';
       document.body.appendChild(downloadLink);
+      alert('video proof recorded !!');
     });
   }
 
@@ -83,6 +84,7 @@ function sendEmergencyEmail() {
   emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
     .then((response) => {
       console.log('Emergency email sent successfully:', response);
+      alert('Emergency email sent successfully !');
     })
     .catch((error) => {
       console.error('Error sending emergency email:', error);
