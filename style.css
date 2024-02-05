@@ -213,13 +213,13 @@ header .navbar {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items:r;
-  background-color: #e2bf87;
+  background-color: #ecb761;
   text-decoration-color: #000;
 }
 
 #aboutUs img {
-  width: 400px;
-  margin: 20px;
+  width: 850px;
+  margin-right: 20px ;
   border-radius: 10px;
 }
 
@@ -229,12 +229,12 @@ header .navbar {
 }
 .content h1 {
   font-size: 100px;
-  color: #ffd4b6;
+  color: #fcf1ea;
 }
 
 .content h2 {
   font-size: 50px;
-  color: #ffdbb4;
+  color: #f8e3ce;
 }
 
 .content h4 {
@@ -258,7 +258,7 @@ header .navbar {
   padding: 5px 10px;
   border-radius: 20px;
   transition: all 0.4s;
-  background-color: #ffca70;
+  background-color: #fccf83;
   
 }
 
@@ -277,12 +277,13 @@ header .navbar {
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 * {
-  box-sizing: border-box;
+  box-sizing:inherit;
 }
 
 #ratings {
   align-items: center;
-  background-color: #f5b277;
+  background: -webkit-linear-gradient(right,#ffa03b,#ffc996,#cc6900
+  , #ffc996);
   display: flex;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
@@ -293,33 +294,34 @@ header .navbar {
 
 .panel-container {
   align-items: center;
-  background-color: #e9b23b;
+  background-color: #fdae6a;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  display: flex;
+  display: relative;
   flex-direction: column;
   font-size: 90%;
   justify-content: center;
-  max-width: 400px;
+  max-width: relative;
+  max-height: relative;
   padding: 30px;
   text-align: center;
 }
 
 .panel-container strong {
-  line-height: 20px;
+  line-height: 500px;
 }
 
 .ratings-container {
   display: flex;
   margin: 20px 0;
-  background-color: #ffca70;
+  background-color: #fdb368;
 }
 
 .rating {
   flex: 1;
   margin: 10px 5px;
   padding: 20px;
-  background-color:#cf9037;
+  background-color:#f5b56c;
 }
 
 .rating:hover,
@@ -346,7 +348,7 @@ header .navbar {
 }
 
 .btn {
-  background-color: #ffca70;
+  background-color: #fdc275;
   border: 0;
   border-radius: 4px;
   color: #fff;
@@ -373,8 +375,6 @@ html{
   scroll-behavior: smooth;
 }
 
-/* Your existing styles here */
-
 
 .scroll-section {
   scroll-snap-align: start;
@@ -397,12 +397,6 @@ html{
   background: #C06B3E;
 }
 
-/* Add more styles as needed */
-
-
-
-
-/* Your existing styles below this line */
 * {
   margin: 0;
   padding: 0;
@@ -418,7 +412,7 @@ html{
 
 .full-height .content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin:0 ;
   width: 100%;
   text-align: center;
   color: #fff;
@@ -428,9 +422,6 @@ html{
   font-size: 3rem;
   line-height: 70px;
 }
-
-/* Add your existing styles for other sections, buttons, etc. */
-
 
 .panel-container strong {
   line-height: 20px;
@@ -444,12 +435,21 @@ html{
 
 }
 
+.graphic img{
+  float: right;
+  width: 972px;
+  height: auto;
+  bottom: 0%;
+  top:relative;
+
+}
+
 .navbar button{
   position:fixed;
   top: 40%;
   left:50%;
   transform: translate(-50%,-50%);
-  background-color: #e9b23b;
+  background-color: #ef9948;
 
   
 }
