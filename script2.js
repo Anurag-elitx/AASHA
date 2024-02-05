@@ -1,14 +1,82 @@
-// JavaScript (script.js)
+let recorder, map, infoWindow;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 6,
+  });
+  infoWindow = new google.maps.InfoWindow();
+
+  const locationButton = document.createElement("button");
+
+  locationButton.textContent = "Pan to Current Location";
+  locationButton.classList.add("custom-map-control-button");
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+  locationButton.addEventListener("click", () => {
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("Location found.");
+          infoWindow.open(map);
+          map.setCenter(pos);
+        },
+        () => {
+          handleLocationError(true, infoWindow, map.getCenter());
+        },
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
+}
+
+const emailButton = document.getElementById("emailButton");
+emailButton.addEventListener("click", () => {
+  const userEmail = prompt("Enter your email", " ");
+
+  if (userEmail) {
+    sendLocationByEmail(userEmail);
+  }
+});
+
+function sendLocationByEmail(email) {
+  const location = {
+    lat: infoWindow.getPosition().lat(),
+    lng: infoWindow.getPosition().lng(),
+  };
+
+  // Use Email.js API for sending email, replace with your actual Email.js template and user ID
+  emailjs.send("service_z7kfwpv", "template_9lkri2t", {
+    to_email: email,
+    location: `Latitude: ${location.lat}, Longitude: ${location.lng}`,
+  })
+    .then((response) => {
+      console.log('Email sent:', response);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+    });
+}
+
+window.initMap = initMap;
+
 const recordButton = document.getElementById('startRecordingBtn');
-let recorder;
 
 // Voice recognition setup
 const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 recognition.lang = 'en-US';
 
-recognition.onresult = function(event) {
+recognition.onresult = function (event) {
   const transcript = event.results[0][0].transcript.toLowerCase();
-  
+
   if (transcript.includes('help')) {
     startRecording();
     sendEmergencyEmail();
@@ -46,21 +114,21 @@ function startRecording() {
 }
 
 function stopRecording() {
-    recorder.stopRecording(function (videoURL) {
-      // Display the recorded video on the webpage
-      const videoElement = document.createElement('video');
-      videoElement.src = videoURL;
-      videoElement.controls = true;
-      document.body.appendChild(videoElement);
-  
-      // Provide a download link for the user to save the video manually
-      const downloadLink = document.createElement('a');
-      downloadLink.href = videoURL;
-      downloadLink.download = 'recorded_video.webm';
-      downloadLink.textContent = 'Download Video';
-      document.body.appendChild(downloadLink);
-    });
-  }
+  recorder.stopRecording(function (videoURL) {
+    // Display the recorded video on the webpage
+    const videoElement = document.createElement('video');
+    videoElement.src = videoURL;
+    videoElement.controls = true;
+    document.body.appendChild(videoElement);
+
+    // Provide a download link for the user to save the video manually
+    const downloadLink = document.createElement('a');
+    downloadLink.href = videoURL;
+    downloadLink.download = 'recorded_video.webm';
+    downloadLink.textContent = 'Download Video';
+    document.body.appendChild(downloadLink);
+  });
+}
 
 function initiateFallAlert() {
   // Your code to handle a fall alert goes here

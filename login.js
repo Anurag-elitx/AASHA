@@ -71,6 +71,7 @@ signupForm.addEventListener("submit", (event) => {
 const loginForm = document.querySelector("form.login");
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
+ window.location.href= "index.html";
   const email = loginForm.elements.email.value;
   const password = loginForm.elements.password.value;
 
