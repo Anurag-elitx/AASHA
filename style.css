@@ -431,17 +431,15 @@ html{
   float:left;
   width: 100px;
   height:auto;
-  
 
 }
 
-.graphic img{
+.graphic img{   /* */
   float: right;
-  width: 972px;
+  width: 950px;
   height: auto;
   bottom: 0%;
   top:relative;
-
 }
 
 .navbar button{
