@@ -435,8 +435,9 @@ html{
 
 .graphic img{   /* */
   float: right;
-  width: 971px;
+  width: 750px;
   bottom: 0%;
+  max-height: 100%;
 }
 
 .navbar button{
