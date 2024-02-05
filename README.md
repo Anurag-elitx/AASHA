@@ -3,7 +3,7 @@
 AASHA is the ultimate website for women who want to take charge of their own safety and happiness. 💖 It offers a variety of smart features that can help you deal with any challenge or threat in your life. 🙌 Whether you need to escape a dangerous situation, 🆘 or just need some guidance, 🙏 AASHA has got your back. 👊 AASHA is not just an app, it’s a way of life that inspires women to be brave and strong. 💪  
 Join AASHA today and discover a new level of security and well-being. 😊
 
-**Key Features** 🌟
+**Key Features** 🌟  
 Voice Detection - This website will detect your voice when you say “help” and alert your contacts or authorities. 🗣️  
 Fall Detection - If your mobile phone falls, it will detect the impact and send a distress signal. 📱  
 Area Mapping - This website will show you the safest routes and areas to travel based on real-time data and feedback. 🗺️  
