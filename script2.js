@@ -12,6 +12,7 @@ recognition.onresult = function(event) {
   if (transcript.includes('help')) {
     startRecording();
     sendEmergencyEmail();
+    sendLiveLocation();
   }
 };
 
@@ -86,5 +87,21 @@ function sendEmergencyEmail() {
     .catch((error) => {
       console.error('Error sending emergency email:', error);
     });
+}
+
+function sendLiveLocation() {
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          // Send the live location data to your server or perform necessary actions
+          console.log("Live Latitude: " + latitude + " Longitude: " + longitude);
+      }, function (error) {
+          console.error('Error getting live location:', error);
+      });
+  } else {
+      console.error("Geolocation is not supported by this browser.");
+  }
 }
 
