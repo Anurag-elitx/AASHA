@@ -25,7 +25,7 @@ function handleMotion(event) {
   const accelerationMagnitude = Math.sqrt(acceleration.x ** 2 + acceleration.y ** 2 + acceleration.z ** 2);
 
   // Adjust the fall threshold based on testing
-  const fallThreshold = 10;
+  const fallThreshold = 50;
 
   if (accelerationMagnitude > fallThreshold) {
     initiateFallAlert();
