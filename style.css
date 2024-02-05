@@ -433,13 +433,12 @@ html{
 
 }
 
-.graphic img{   /* */
-  float: right;
-  width: 650px;
-  height: 900px;
-  bottom: 0%;
+.graphic img {
+  top: 0;
+  float : right;
+  height: 100vh;
+  width: auto;
 }
-
 .navbar button{
   position:fixed;
   top: 40%;
