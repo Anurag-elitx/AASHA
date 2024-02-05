@@ -129,25 +129,10 @@ function stopRecording() {
     downloadLink.download = 'recorded_video.webm';
     downloadLink.textContent = 'Download Video';
     document.body.appendChild(downloadLink);
+    alert('video proof recorded !!');
   });
 }
 
-    recorder.stopRecording(function (videoURL) {
-      // Display the recorded video on the webpage
-      const videoElement = document.createElement('video');
-      videoElement.src = videoURL;
-      videoElement.controls = true;
-      document.body.appendChild(videoElement);
-  
-      // Provide a download link for the user to save the video manually
-      const downloadLink = document.createElement('a');
-      downloadLink.href = videoURL;
-      downloadLink.download = 'recorded_video.webm';
-      downloadLink.textContent = 'Download Video';
-      document.body.appendChild(downloadLink);
-      alert('video proof recorded !!');
-    });
-  }
 
 
 function initiateFallAlert() {
