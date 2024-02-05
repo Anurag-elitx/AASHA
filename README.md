@@ -11,7 +11,7 @@ Join AASHA today and discover a new level of security and well-being. 😊
 5. Nearby Emergency Service - This website will locate the nearest emergency service providers and contact them for you. 🚑  
 6. Live Location Sharing - This website will share your live location with your trusted contacts or authorities until you are safe. 📍  
 
-**Tech Stacks** 🛠️
+**Tech Stacks** 🛠️  
 HTML  
 CSS  
 JavaScript  
