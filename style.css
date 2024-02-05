@@ -435,7 +435,8 @@ html{
 
 .graphic img{   /* */
   float: right;
-  width: 850px;
+  width: 700px;
+  height: 800px;
   bottom: 0%;
 }
 
