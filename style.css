@@ -219,7 +219,6 @@ header .navbar {
 
 #aboutUs img {
   width: 500px;
-  margin-right: 20px ;
   border-radius: 10px;
 }
 
@@ -436,7 +435,7 @@ html{
 
 .graphic img{   /* */
   float: right;
-  width: 600px;
+  width: 700px;
   bottom: 0%;
 }
 
