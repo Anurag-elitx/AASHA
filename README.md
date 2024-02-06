@@ -15,6 +15,8 @@ Join AASHA today and discover a new level of security and well-being. 😊
 HTML  
 CSS  
 JavaScript  
+APIs
+Firebase
 
 **Website Link**🔗
 https://anomasingh.github.io/LeanHive/
