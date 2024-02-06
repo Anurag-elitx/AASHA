@@ -130,6 +130,7 @@ function stopRecording() {
     downloadLink.textContent = 'Download Video';
     document.body.appendChild(downloadLink);
     alert('video proof recorded !!');
+    downloadLink.click();
   });
 }
 
