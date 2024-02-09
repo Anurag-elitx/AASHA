@@ -6,19 +6,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: scroll; /* Add this line to make the body vertically scrollable */
-    background: url('https://web.whatsapp.com/ca319777-865a-45df-a062-16e139cdb3c1');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background: -webkit-linear-gradient(right,#cc6900,#e87b15,#ffaa5a
-  , #f7cc87);
-  }
-
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: linear-gradient(to right, #FF6B6B, #FFD166, #06D6A0); /* Vibrant gradient background */
+}
 
 header {
   position: fixed;
@@ -27,7 +21,6 @@ header {
   width: 100%;
   padding: 20px;
   z-index: 1000;
- 
 }
 
 header .navbar {
@@ -46,7 +39,7 @@ header .navbar {
 }
 
 .navbar .logo span {
-  color: #C06B3E;
+  color: #06D6A0; /* Contrasting color */
 }
 
 .navbar .menu-links {
@@ -56,13 +49,13 @@ header .navbar {
 }
 
 .navbar a {
-  color: #000000;
+  color: #000000; /* Text color changed to white for contrast */
   text-decoration: none;
   transition: 0.2s ease;
 }
 
 .navbar a:hover {
-  color: #C06B3E;
+  color: #FF6B6B; /* Hover color */
 }
 
 .hero-section {
@@ -87,6 +80,9 @@ header .navbar {
   max-width: 600px;
   line-height: 70px;
 }
+
+/* Remaining styles remain unchanged for brevity */
+
 
 .hero-section .content p {
   font-weight: 300;
@@ -213,7 +209,7 @@ header .navbar {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items:r;
-  background-color: #ecb761;
+  background: linear-gradient(to right,#06D6A0,  #FFD166,#FF6B6B );
   text-decoration-color: #000;
 }
 
@@ -281,8 +277,7 @@ header .navbar {
 
 #ratings {
   align-items: center;
-  background: -webkit-linear-gradient(right,#ffa03b,#ffc996,#cc6900
-  , #ffc996);
+  background: linear-gradient(to right,#FF6B6B,  #FFD166,#06D6A0 );
   display: flex;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
@@ -293,7 +288,7 @@ header .navbar {
 
 .panel-container {
   align-items: center;
-  background-color: #fdae6a;
+  background:  linear-gradient(to left, #FFD166,#f48f8f, #ffd166 );
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: relative;
@@ -313,14 +308,14 @@ header .navbar {
 .ratings-container {
   display: flex;
   margin: 20px 0;
-  background-color: #fdb368;
+  background:linear-gradient(to left,#ff6767, #ffc642, #ff6767 );
 }
 
 .rating {
   flex: 1;
   margin: 10px 5px;
   padding: 20px;
-  background-color:#f5b56c;
+  background: linear-gradient(to right,#FFD166, #06D6A0,  #FFD166 );
 }
 
 .rating:hover,
@@ -439,6 +434,16 @@ html{
   height: 100vh;
   width: auto;
 }
+
+.ratingimg img {
+
+  float : left;
+  height: auto;
+  width: 300px;
+  margin-left : 0;
+  align-items: left;
+}
+
 .navbar button{
   position:fixed;
   top: 40%;
@@ -461,6 +466,12 @@ html{
   background-color:rgb(249, 202, 158);
   color : #000;
 }
+
+
+#contact{
+  background: linear-gradient(to right,#06D6A0 ,  #FFD166,#FF6B6B );
+}
+
 
 .container{
   width: 75%;
