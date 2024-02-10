@@ -78,6 +78,7 @@ signInWithEmailAndPassword(auth, email, password)
 // Signed in successfully
 const user = userCredential.user;
 console.log('Signed in:', user);
+window.location.href = 'index.html';
 })
 .catch((error) => {
 const errorCode = error.code;
@@ -88,5 +89,5 @@ console.error('Login error:', errorCode, errorMessage);
 document.getElementById('loginForm').addEventListener('submit', function(event) {
 event.preventDefault();
 // Redirect to index.html
-window.location.href = 'index.html';
+
 });
