@@ -27,6 +27,18 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase
   // Listen for form submit
   document.getElementById('profileForm').addEventListener('submit', submitForm);
   
+  function showAlert(message) {
+    const alertElement = document.getElementById('alertMessage');
+    alertElement.textContent = message;
+    alertElement.style.display = 'block';
+    alert('Profile updated successfully!');
+  
+    // Hide alert after 3 seconds
+    setTimeout(() => {
+      alertElement.style.display = 'none';
+    }, 3000);
+  }
+
   // Submit form
   function submitForm(e){
     e.preventDefault();
@@ -42,10 +54,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase
     saveMessage(fullName, email, phone, emergencyContact, location);
   
     
-    // Hide alert after 3 seconds
-    alert('Profile updated successfully!');
-  
+    showAlert('Profile updated successfully!');
+
     // Clear form
+    document.getElementById('profileForm').reset();
     
   }
   
@@ -64,3 +76,4 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase
         location: location
       });
 }
+

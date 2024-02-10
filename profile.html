@@ -101,7 +101,9 @@
     
 
       <button type="submit">Update Profile</button>
+      
     </form>
+    <div id="alertMessage" style="display: none;"></div>
   </section>
 
   <script>
@@ -169,10 +171,6 @@
         contactList.appendChild(listItem);
         newContactInput.value = '';
       }
-    }
-
-    function updateProfile() {
-      alert('Profile updated successfully!');
     }
   </script>
 
