@@ -19,4 +19,4 @@ APIs
 Firebase
 
 **Website Link**🔗
-https://anomasingh.github.io/LeanHive/
+https://anomasingh.github.io/AASHA/
