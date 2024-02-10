@@ -58,11 +58,13 @@ createUserWithEmailAndPassword(auth, email, password)
 // Signed up successfully
 const user = userCredential.user;
 console.log('Signed up:', user);
+alert("SignedUp successfully");
 })
 .catch((error) => {
 const errorCode = error.code;
 const errorMessage = error.message;
 console.error('Signup error:', errorCode, errorMessage);
+alert(errorMessage);
 });
 });
 
@@ -78,12 +80,14 @@ signInWithEmailAndPassword(auth, email, password)
 // Signed in successfully
 const user = userCredential.user;
 console.log('Signed in:', user);
+alert("loggedIn successfully");
 window.location.href = 'index.html';
 })
 .catch((error) => {
 const errorCode = error.code;
 const errorMessage = error.message;
 console.error('Login error:', errorCode, errorMessage);
+alert("invalid-login-credentials");
 });
 });
 document.getElementById('loginForm').addEventListener('submit', function(event) {
