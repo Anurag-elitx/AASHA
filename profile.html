@@ -62,8 +62,6 @@
   float:left;
   width: 100px;
   height:auto;
-  
-
 }
   </style>
 </head>
@@ -96,11 +94,17 @@
       <label for="location">Current Location:</label>
       <div id="map"></div>
       <input type="text" id="location" name="location" required>
+
+      <label for="imageUpload">Upload Image:</label>
+      <input type="file" id="imageUpload" accept="image/*" onchange="handleImageUpload(event)">
     
 
       <button type="button" onclick="updateProfile()">Update Profile</button>
     </form>
   </section>
+
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"></script>
 
   <script>
     let map, infoWindow;
@@ -173,6 +177,62 @@
       alert('Profile updated successfully!');
     }
   </script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics.js";
+
+  import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCyTPPPm942tOrWvZBdZK3Rj3Jw1SKhLjY",
+  authDomain: "aasha-profile.firebaseapp.com",
+  projectId: "aasha-profile",
+  storageBucket: "aasha-profile.appspot.com",
+  messagingSenderId: "66792322058",
+  appId: "1:66792322058:web:32099f4c07396b6c029bf3",
+  measurementId: "G-1YG1V33PGT"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const db = firebase.firestore();
+
+  function updateProfile() {
+    // Retrieve form data
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const emergencyContact = document.getElementById('emergencyContact').value;
+    const location = document.getElementById('location').value;
+
+    // Add the data to Firestore
+    db.collection("profiles").add({
+      fullName: fullName,
+      email: email,
+      phone: phone,
+      emergencyContact: emergencyContact,
+      location: location
+    })
+    .then((docRef) => {
+      console.log("Document written with ID: ", docRef.id);
+      alert('Profile updated successfully!');
+    })
+    .catch((error) => {
+      console.error("Error adding document: ", error);
+      alert('An error occurred while updating profile. Please try again later.');
+    });
+  }
+</script>
 
 </body>
 </html>

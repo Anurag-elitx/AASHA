@@ -288,7 +288,7 @@ header .navbar {
 
 .panel-container {
   align-items: center;
-  background:  linear-gradient(to left, #FFD166,#f48f8f, #ffd166 );
+  background:  linear-gradient(to left, #ffe4a4,#ffb5b5, #ffedc4 );
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: relative;
