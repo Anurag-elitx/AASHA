@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Chatbot Integration</title>
+    <!-- Add Dialogflow Messenger JavaScript -->
+    <!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script> -->
+</head>
+<body>
+    <style>
+        #chatbot-container {
+    position: fixed;
+    top: 50%;
+    right: 200px; /* Adjust the distance from the right edge */
+    transform: translateY(-50%);
+    z-index: 9999; /* Ensure it's above other elements */
+    background: linear-gradient(45deg, #FFA500, #FF6347); /* Adjust shades of orange */
+}
+body{
+    background: linear-gradient(45deg, #FFA500, #FF6347);
+    
+    /* background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fai-chat-bot-background&psig=AOvVaw0A4mMA_Y2e00vQgHKc5C3L&ust=1707716244671000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOiR9_LIooQDFQAAAAAdAAAAABAY'); */
+}
+/* .graphic img {
+    top: 0;
+    float : right;
+    height: 100vh;
+    width: auto;
+  } */
+
+    </style>
+    <!-- <div class = "graphic">
+        <img src="bg2.png" alt="computer user">
+    </div> -->
+    <!-- <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9d1547b7-65ca-40a4-9cc1-77a3ad0c77cd"></iframe> -->
+        
+
+    <!-- This div will be replaced by the chatbot interface -->
+    <div id="chatbot-container">
+        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9d1547b7-65ca-40a4-9cc1-77a3ad0c77cd"></iframe>
+        <df-messenger></df-messenger>
+    </div>
+
+
+</body>
+</html>
