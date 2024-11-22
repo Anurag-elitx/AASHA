@@ -608,3 +608,89 @@ html{
    margin-left: 0;
  }
 }
+/* styles.css */
+
+/* General body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Section for the recording buttons and form */
+#startRecordingBtn,
+#emailButton {
+  display: inline-block;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#startRecordingBtn:hover,
+#emailButton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#emailForm {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#emailForm label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#emailForm input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#emailForm input[type="email"]:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+#emailForm button[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#emailForm button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#emailButton {
+  display: block;
+  margin: 20px auto;
+}
